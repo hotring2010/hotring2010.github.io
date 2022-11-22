@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		
+		<!-- <div id="app_2" v-html="message"/>
+		<script>
+			var vm = new Vue({
+				el:'#app_2',
+				data:{
+					message:"<h1>message_1</h1>"
+				}
+			})
+		</script> -->
+		
+		<br />
+		
+		<p id="app_1">msg:{{message}}</p>
+		
+
+		<script>
+			var vm = new Vue({
+				el:'#app_1',
+				data:{
+					message:"hhhh"
+				}
+			})
+		</script>
+		
+		
+		
+		<br />
+		<div id="vue_det">
+			<h1>site : {{site}}</h1>
+			<h2>url : {{url}}</h2>
+			<h3>{{details()}}</h3>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: "#vue_det",
+				data:{
+					site : "Demo",
+					url : "www.baidu.com",
+					alexa : "10000"
+				},
+				methods:{
+					details : function(){
+						return this.site + ":" + this.url;
+					}
+				}
+			})
+		</script>
+		
+		
+	</body>
+</html>
